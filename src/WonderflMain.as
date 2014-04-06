@@ -47,7 +47,7 @@ package
 			
 			addChild(_infoCanvas);
 			addChild(_uiCanvas);
-			addButton(0, 0, "FullScreen\n(Ctrl + F)", MouseEvent.MOUSE_DOWN, stage_mouseDown);
+			addButton(0, 0, "FullScreen\n(F / Ctrl + F)", MouseEvent.MOUSE_DOWN, stage_mouseDown);
 			addButton(200, 0, "Copy to clipbord\n(C)", MouseEvent.MOUSE_DOWN, textCopy);
 			addButton(400, 0, "Save\n(S)", MouseEvent.MOUSE_DOWN, save);
 			
@@ -64,6 +64,8 @@ package
 		{
 			if (e.keyCode == Keyboard.C) {
 				textCopy(null);
+			}else if (e.keyCode == Keyboard.F) {
+				stage_mouseDown(null);
 			}else if (e.keyCode == Keyboard.S) {
 				save(null);
 			}
